@@ -1,12 +1,12 @@
 import React from 'react'
-import Star from '../elements/Star'
-import TestimonyAccent from '../assets/images/testimonial_frame.png'
-import Button from '../elements/Button'
+import Star from '../../elements/Star'
+import TestimonyAccent from '../../assets/images/testimonial_frame.png'
+import Button from '../../elements/Button'
 import Fade from 'react-reveal/Fade'
 
 export default function Testimony({data}) {
     return (
-        <Fade bottom>
+        <Fade bottom delay={400}>
         <section className="container">
             <div className="row  align-items-center">
                 <div className="col-auto" style={{marginRight: 70}}>

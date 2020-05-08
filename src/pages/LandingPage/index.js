@@ -1,8 +1,6 @@
 import React from 'react'
-import landingPage from '../json/landingPage.json'
-import { Header, Hero, MostPicked, Category } from '../parts'
-import Testimony from '../parts/Testimony';
-import Footer from '../parts/Footer';
+import landingPage from '../../json/landingPage.json'
+import { Header, Hero, MostPicked, Category, Testimony, Footer} from '../../parts'
 
 export default class LandingPage extends React.Component {
     constructor(props) {

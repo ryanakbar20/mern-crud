@@ -9,9 +9,9 @@
     z-index: 3;
 
     &.sm {
-        grid-auto-rows: minmax(210px, auto);
-        row-gap: 15px;
-        column-gap: 15px;
+        grid-auto-rows: minmax(245px, auto);
+        row-gap: 10px;
+        column-gap: 10px;
     }
 
     .item {

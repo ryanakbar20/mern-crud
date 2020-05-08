@@ -1,6 +1,6 @@
 import React from 'react'
-import IconText from './IconText'
-import Button from '../elements/Button'
+import IconText from '../IconText'
+import Button from '../../elements/Button'
 import Fade from 'react-reveal/Fade'
 
 export default function Header(props) {
@@ -9,9 +9,25 @@ export default function Header(props) {
         return props.location.pathname === path ? " active" : "";
     };
 
+    if (props.isCentered) {
+        return(
+            <Fade>
+            <header className="spacing-sm">
+                <div className="container">
+                    <nav className="navbar navbar-expand-lg navbar-light">
+                        <div className="mx-auto">
+                            <IconText />
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            </Fade>
+        )
+    }
+
     return (
         <div>
-            <Fade delay={300}>
+            <Fade>
             <header className="spacing-sm">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light">

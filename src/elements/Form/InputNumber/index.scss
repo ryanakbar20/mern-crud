@@ -1,0 +1,40 @@
+@import '../../../assets/scss/colorVariables.scss';
+
+.input-number {
+    .input-group {
+        background-color: $white;
+        .input-group-text {
+            height: 45px;
+            width: 45px;
+            border: 0;
+            border-radius: 4px !important;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            user-select: none;
+            padding: 0;
+            color: $white;
+
+            &.minus {
+                background-color: $red;
+            }
+
+            &.plus {
+                background-color: $teal;
+            }
+        }
+
+        input.form-control {
+            min-height: 45px;
+            width: 250px;
+            background-color: $gray-100;
+            padding: 0.575rem 1rem;
+            text-align: center;
+            border: 0;
+            box-shadow: 0;
+            border-radius: 0;
+            outline: 0;
+        }
+    }
+}

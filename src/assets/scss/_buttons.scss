@@ -21,6 +21,10 @@
   @include transition($btn-transition);
   min-height: 45px;
 
+  &.br-4 {
+    border-radius: 4px;
+  }
+
   @include hover() {
     color: $body-color;
     text-decoration: none;
