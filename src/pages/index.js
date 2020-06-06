@@ -1,9 +1,9 @@
-import DetailsPage from './DetailsPage'
-import LandingPage from './LandingPage'
-import Checkout from './Checkout'
+import DetailsPage from './DetailsPage';
+import LandingPage from './LandingPage';
+import Checkout from './Checkout';
 
 export {
-    DetailsPage,
-    LandingPage,
-    Checkout
-}
+  DetailsPage,
+  LandingPage,
+  Checkout,
+};

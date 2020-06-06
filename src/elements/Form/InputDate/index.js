@@ -1,12 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import propTypes from "prop-types";
-
 import { DateRange } from "react-date-range";
-
 import "./index.scss";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
-
 import formatDate from "../../../utils/formatDate";
 import iconCalendar from "../../../assets/icons/ic_calendar.svg";
 
@@ -18,7 +15,7 @@ export default function Date(props) {
     const target = {
       target: {
         value: value.selection,
-        name: name,
+        name,
       },
     };
     props.onChange(target);
@@ -44,7 +41,7 @@ export default function Date(props) {
   };
 
   const displayDate = `${value.startDate ? formatDate(value.startDate) : ""}${
-    value.endDate ? " - " + formatDate(value.endDate) : ""
+    value.endDate ? ` - ${formatDate(value.endDate)}` : ""
   }`;
 
   return (
@@ -70,7 +67,7 @@ export default function Date(props) {
         {isShowed && (
           <div className="date-range-wrapper">
             <DateRange
-              editableDateInputs={true}
+              editableDateInputs
               onChange={datePickerChange}
               moveRangeOnFirstSelection={false}
               onRangeFocusChange={check}
