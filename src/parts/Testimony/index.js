@@ -1,8 +1,8 @@
-import React from "react";
-import Fade from "react-reveal/Fade";
-import Star from "../../elements/Star";
-import TestimonyAccent from "../../assets/images/testimonial_frame.png";
-import Button from "../../elements/Button";
+import React from 'react';
+import Fade from 'react-reveal/Fade';
+import Star from '../../elements/Star';
+import TestimonyAccent from '../../assets/images/testimonial_frame.png';
+import Button from '../../elements/Button';
 
 export default function Testimony({ data }) {
   return (
@@ -12,16 +12,16 @@ export default function Testimony({ data }) {
           <div className="col-auto" style={{ marginRight: 70 }}>
             <div
               className="testimonial-hero"
-              style={{ margin: "30px 0 0 30px" }}
+              style={{ margin: '30px 0 0 30px' }}
             >
               <img
                 src={TestimonyAccent}
                 alt="testimony-frame"
                 className="position-absolute"
-                style={{ margin: "-30px 0 0 -30px" }}
+                style={{ margin: '-30px 0 0 -30px' }}
               />
               <img
-                src={data.imageUrl}
+                src={`${process.env.REACT_APP_HOST}/${data.imageUrl}`}
                 alt="testimonial"
                 className="position-absolute"
               />

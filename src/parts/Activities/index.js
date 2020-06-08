@@ -2,16 +2,17 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Button from '../../elements/Button';
 
-export default function Category({ data }) {
-  return data.map((category, index1) => (
+export default function Activities({ data }) {
+  if (data.length < 1) return null;
+  return (
     <Fade>
-      <section className="container" key={`category-${index1}`}>
-        <h5>{category.name}</h5>
+      <section className="container">
+        <h5>Activity</h5>
         <div className="container-grid">
-          {category.itemId.length > 0 &&
-            category.itemId.map((item, index2) => (
+          {data.map((item, index2) => {
+            return (
               <div
-                key={`category-${index1}-item-${index2}`}
+                key={`activity-item-${index2}`}
                 className="item column-3 row-1"
               >
                 <Fade bottom delay={300 * index2}>
@@ -24,7 +25,7 @@ export default function Category({ data }) {
                     )}
                     <figure className="img-wrapper">
                       <img
-                        src={`${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`}
+                        src={`${process.env.REACT_APP_HOST}/${item.imageUrl}`}
                         alt={item.name}
                         className="img-cover category"
                       />
@@ -37,16 +38,15 @@ export default function Category({ data }) {
                       >
                         <h6 className="text-gray-900">{item.name}</h6>
                       </Button>
-                      <span className="text-gray-600">
-                        {`${item.city}, ${item.country}`}
-                      </span>
+                      <span className="text-gray-600">{`${item.type}`}</span>
                     </div>
                   </div>
                 </Fade>
               </div>
-            ))}
+            );
+          })}
         </div>
       </section>
     </Fade>
-  ));
+  );
 }

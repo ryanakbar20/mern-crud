@@ -1,6 +1,6 @@
-import React from "react";
-import Fade from "react-reveal/Fade";
-import Button from "../../elements/Button";
+import React from 'react';
+import Fade from 'react-reveal/Fade';
+import Button from '../../elements/Button';
 
 export default function MostPicked(props) {
   return (
@@ -11,21 +11,21 @@ export default function MostPicked(props) {
           {props.data.map((item, index) => (
             <div
               key={`mostpicked${index}`}
-              className={`item column-4 ${index === 0 ? "row-2" : "row-1"}`}
+              className={`item column-4 ${index === 0 ? 'row-2' : 'row-1'}`}
             >
               <Fade bottom delay={300 * index}>
                 <div className="card card-featured">
                   <div className="tag">
                     ${item.price}
                     <span className="font-weight-light">
-                      {" "}
+                      {' '}
                       Per
                       {item.unit}
                     </span>
                   </div>
                   <figure className="img-wrapper">
                     <img
-                      src={item.imageUrl}
+                      src={`${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`}
                       alt={item.name}
                       className="img-cover"
                     />

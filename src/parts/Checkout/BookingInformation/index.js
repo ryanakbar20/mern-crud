@@ -1,6 +1,6 @@
-import React from "react";
-import Fade from "react-reveal";
-import { InputText } from "../../../elements/Form";
+import React from 'react';
+import Fade from 'react-reveal';
+import { InputText } from '../../../elements/Form';
 
 export default function BookingInformation(props) {
   const { itemDetails, data, checkout } = props;
@@ -14,7 +14,7 @@ export default function BookingInformation(props) {
                 <figure className="img-wrapper">
                   <img
                     className="img-cover"
-                    src={itemDetails.imageUrls[0].url}
+                    src={`${process.env.REACT_APP_HOST}/${itemDetails.imageId[0].imageUrl}`}
                     alt={itemDetails.name}
                   />
                 </figure>
@@ -23,7 +23,7 @@ export default function BookingInformation(props) {
             <div className="row align-items-center mt-3">
               <div className="col">
                 <div className="meta-wrapper">
-                  <h5>{itemDetails.name}</h5>
+                  <h5>{itemDetails.title}</h5>
                   <span className="text-gray-500">
                     {itemDetails.city},{itemDetails.country}
                   </span>
@@ -31,10 +31,10 @@ export default function BookingInformation(props) {
               </div>
               <div className="col-auto">
                 <span className="text-gray-900">
-                  ${checkout.duration * itemDetails.price} USD{" "}
-                  <span className="text-gray-500"> Per </span>{" "}
+                  ${checkout.duration * itemDetails.price} USD{' '}
+                  <span className="text-gray-500"> Per </span>{' '}
                   {checkout.duration} {itemDetails.unit}
-                  {checkout.duration > 1 ? "s" : ""}
+                  {checkout.duration > 1 ? 's' : ''}
                 </span>
               </div>
             </div>

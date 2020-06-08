@@ -10,7 +10,7 @@ import FrameHero from '../../assets/images/image-hero-frame.png';
 export default function Hero(props) {
   function showMostPicked() {
     window.scrollTo({
-      top: props.refMostPicked.current.offsetTop - 30,
+      top: 700,
       behavior: 'smooth',
     });
   }

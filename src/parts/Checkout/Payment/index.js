@@ -1,8 +1,8 @@
-import React from "react";
-import Fade from "react-reveal";
-import { InputText, InputFile } from "../../../elements/Form";
-import logoBca from "../../../assets/icons/bca.png";
-import logoMandiri from "../../../assets/icons/mandiri.png";
+import React from 'react';
+import Fade from 'react-reveal';
+import { InputText, InputFile } from '../../../elements/Form';
+import logoBca from '../../../assets/icons/bca.png';
+import logoMandiri from '../../../assets/icons/mandiri.png';
 
 export default function Payment(props) {
   const { itemDetails, data, checkout } = props;
@@ -19,8 +19,8 @@ export default function Payment(props) {
             <Fade delay={300}>
               <p className="mb-3">Transfer Pembayaran :</p>
               <p>Tax :{tax}%</p>
-              <p>Tax : ${subTotal} USD</p>
-              <p>Tax : ${grandTotal} USD</p>
+              <p>Sub total : ${subTotal} USD</p>
+              <p>Total : ${grandTotal} USD</p>
               <div className="row mt-4">
                 <div className="col-3 text-right">
                   <img src={logoBca} alt="logoBCA" width="60" />
