@@ -14,6 +14,7 @@ export default function Hero(props) {
       behavior: 'smooth',
     });
   }
+  console.log(props);
 
   function numberFormat(number) {
     const formatNumbering = new Intl.NumberFormat('id-ID');
